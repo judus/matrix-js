@@ -3,8 +3,8 @@ A matrix calculator
 
 #### Usage
 ```js
-var m1 = new Matrix(10, 10);
-var m2 = new Matrix(10, 10);
+let m1 = new Matrix(10, 10); // rows, cols
+let m2 = new Matrix(10, 10); // rows, cols
 
 m1.values = [
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -18,7 +18,6 @@ m1.values = [
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ];
-
 m2.values = [
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -33,15 +32,22 @@ m2.values = [
 ];
 
 // Addition
-m1.add(m2); 
-console.table(m1.values);
+m1.add(m2);
+m1.print();
+
+// Subtraction
+let m3 = Matrix.subtract(m1, m2);
+m3.print();
 
 // Multiplication
-var m3 = m1.multiply(m2);
-console.table(m3.values);
+let m4 = Matrix.multiply(m1, m2);
+m4.print();
 
-// Randomize values
-var m4 = new Matrix(3, 3);
-m4.randomize();
-console.table(m4.values);
+// Transpose
+let m5 = Matrix.transpose(m4);
+m5.print();
+
+// Randomize
+m5.randomize().print();
+
 ```

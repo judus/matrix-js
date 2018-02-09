@@ -26,8 +26,24 @@ m2.values = [
 	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ];
 
-let m3 = Matrix.multiply(m1, m2);
+// Addition
+m1.add(m2);
+m1.print();
 
+// Subtraction
+let m3 = Matrix.subtract(m1, m2);
 m3.print();
 
+// Multiplication
+let m4 = Matrix.multiply(m1, m2);
+m4.print();
+
+// Transpose
+let m5 = Matrix.transpose(m4);
+m5.print();
+
+// Randomize
+let m6 = new Matrix(4, 4);
+m6.randomize();
+m6.print();
 
